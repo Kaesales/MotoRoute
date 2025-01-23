@@ -1,9 +1,10 @@
 from src.models.entregador import Entregador
+from src.models.entregas import Entrega
 from typing import List
 
 class EntregadorDAO:
-    __data = List[Entregador] = []
-
+    __data: List[Entregador] = []
+    __data_entregas: List[Entrega] = []
 
     @classmethod
     def adicionar_entregador(cls, entregador:Entregador):
@@ -22,3 +23,13 @@ class EntregadorDAO:
         # Aqui, como o objeto já está em `_data`, não precisa fazer nada.
         # Este método pode ser útil para explicitamente salvar em um banco de dados.
         pass
+    
+    
+    @classmethod
+    def adicionar_entrega(cls, entrega:Entrega):
+        cls.__data_entregas.append(entrega)
+
+    
+    @classmethod
+    def deletar(cls, entregador):
+        cls.__data.remove(entregador)

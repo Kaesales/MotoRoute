@@ -1,0 +1,304 @@
+{
+	"info": {
+		"_postman_id": "b59c9b7d-6f9f-4f9f-89f8-d6578b9ad358",
+		"name": "sistema de entregas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "39744494"
+	},
+	"item": [
+		{
+			"name": "rotas dos entregadores",
+			"item": [
+				{
+					"name": "listar entregas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/entregas/22222222222"
+					},
+					"response": []
+				},
+				{
+					"name": "calcular distancia",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "latitude",
+									"value": "-23.595918",
+									"type": "text"
+								},
+								{
+									"key": "longitude",
+									"value": "-46.687134",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/entregador/HO093JA/distancia"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rotas dos gerenciadores",
+			"item": [
+				{
+					"name": "listar entregas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/gerenciador/22222222222/entregas"
+					},
+					"response": []
+				},
+				{
+					"name": "buscar entregador",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/gerenciador/22222222222"
+					},
+					"response": []
+				},
+				{
+					"name": "buscar entregas de um entregador",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/gerenciador/10971215340/entregas"
+					},
+					"response": []
+				},
+				{
+					"name": "atualizar entregador",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nome",
+									"value": "José Silva Souza",
+									"type": "text"
+								},
+								{
+									"key": "data_nascimento",
+									"value": "15/02/2005",
+									"type": "text"
+								},
+								{
+									"key": "cpf_atualizado",
+									"value": "10971215347",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "souzajose@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/gerenciador/10971215340/atualizar"
+					},
+					"response": []
+				},
+				{
+					"name": "atribuir entrega",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://127.0.0.1:8000/entrega/HO093JA/22222222222"
+					},
+					"response": []
+				},
+				{
+					"name": "criar entregador",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nome",
+									"value": "Otávio Nunes",
+									"type": "text"
+								},
+								{
+									"key": "data_nascimento",
+									"value": "24/02/1995",
+									"type": "text"
+								},
+								{
+									"key": "cpf",
+									"value": "22222222222",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "otnunes@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/gerenciador/entregador"
+					},
+					"response": []
+				},
+				{
+					"name": "criar entrega",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "codigo",
+									"value": "HO093JA",
+									"type": "text"
+								},
+								{
+									"key": "nome_destinatario",
+									"value": "Laura Maciel da Silva",
+									"type": "text"
+								},
+								{
+									"key": "cpf",
+									"value": "11111111111",
+									"type": "text"
+								},
+								{
+									"key": "endereco",
+									"value": "Rua das flores",
+									"type": "text"
+								},
+								{
+									"key": "numero",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "bairro",
+									"value": "Jardim Primavera",
+									"type": "text"
+								},
+								{
+									"key": "cidade",
+									"value": "São Paulo",
+									"type": "text"
+								},
+								{
+									"key": "latitude",
+									"value": "-23.587416",
+									"type": "text"
+								},
+								{
+									"key": "longitude",
+									"value": " -46.657634",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://127.0.0.1:8000/gerenciador/entrega"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar entregadores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/gerenciador/entregadores"
+					},
+					"response": []
+				},
+				{
+					"name": "listar entregas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/entregas"
+					},
+					"response": []
+				},
+				{
+					"name": "deletar entregador",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:8000/gerenciador/entregador/22222222222"
+					},
+					"response": []
+				},
+				{
+					"name": "deletar entrega",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:8000/gerenciador/entrega/HO093JA"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "criar gerenciador",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nome",
+							"value": "Kaella",
+							"type": "text"
+						},
+						{
+							"key": "data_nascimento",
+							"value": "26-01-2005",
+							"type": "text"
+						},
+						{
+							"key": "cpf",
+							"value": "10971215341",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "saleskaella@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/gerenciador"
+			},
+			"response": []
+		},
+		{
+			"name": "listar gerenciadores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/gerenciadores"
+			},
+			"response": []
+		},
+		{
+			"name": "deletar gerenciador",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:8000/gerenciador/{cpf}"
+			},
+			"response": []
+		}
+	]
+}

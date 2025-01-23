@@ -1,12 +1,12 @@
 from datetime import date
-
-
-class Entregador:
-    def __init__(self, nome: str, data_nascimento: date, cpf: str, email:str):
-        self.nome = nome
-        self.data_nascimento = data_nascimento
-        self.cpf = cpf
-        self.email = email
-        self.entregas =  []
+from pydantic import BaseModel
+from typing import List
+from src.models.entregas import Entrega
+class Entregador(BaseModel):
+    nome:str
+    data_nascimento: str
+    cpf:str
+    email: str
+    
      
     
