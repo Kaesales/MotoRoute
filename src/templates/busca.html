@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Buscar Entregador por CPF</h2>
+    <form method="get" action="/busca">
+        <div>
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" required>
+        </div>
+        <button type="submit">Buscar</button>
+    </form>
+    
+    {% if entregador %}
+        <div class="resultado-busca">
+            <h3>Dados do Entregador</h3>
+            <p>Nome: {{ entregador.nome }}</p>
+            <p>CPF: {{ entregador.cpf }}</p>
+            <p>Email: {{ entregador.email }}</p>
+        </div>
+    {% elif mensagem %}
+        <div class="alert alert-danger">
+            {{ mensagem }}
+        </div>
+    {% endif %}
+{% endblock %}

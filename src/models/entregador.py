@@ -1,4 +1,4 @@
-from datetime import date
+
 from pydantic import BaseModel
 from typing import List
 from src.models.entregas import Entrega

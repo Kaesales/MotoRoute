@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Lista de Entregadores</h2>
+    <ul>
+        {% for entregador in entregadores %}
+            <li>
+                {{ entregador.nome }} - {{ entregador.cpf }}
+                <a href="/edicao/{{ entregador.cpf }}" class="btn-editar">Editar</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

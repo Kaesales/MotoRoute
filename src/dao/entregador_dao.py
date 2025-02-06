@@ -18,12 +18,12 @@ class EntregadorDAO:
     def buscar_por_cpf(cls, cpf: str):
         return next((item for item in cls.__data if item.cpf == cpf), None)
     
+    
     @classmethod
     def atualizar(cls, entregador:Entregador):
         # Aqui, como o objeto já está em `_data`, não precisa fazer nada.
         # Este método pode ser útil para explicitamente salvar em um banco de dados.
         pass
-    
     
     @classmethod
     def adicionar_entrega(cls, entrega:Entrega):

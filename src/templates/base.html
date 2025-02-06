@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Entregadores</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+</head>
+<body>
+    <h1>Moto Route</h1>
+    <nav>
+        <a href="/">Home</a> |
+        <a href="/cadastro">Cadastrar Entregador</a> |
+        <a href="/listagem">Listar Entregadores</a> |
+        <a href="/busca">Buscar Entregador</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
